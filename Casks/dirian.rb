@@ -1,6 +1,6 @@
 cask "dirian" do
-  version "0.3.2"
-  sha256 "37eff99e35363d8b26f653b6d9f21ee9e55c5aacfd800ce9aac49c0993013678"
+  version "0.3.3"
+  sha256 "b85aa3b6ab54dd9811a9ab24d831acc4b40d691d87a365901757986beb23e4a8"
 
   url "https://github.com/ike-V/Dirian/releases/download/v#{version}/Dirian-#{version}.zip"
   name "Dirian"
@@ -20,6 +20,11 @@ cask "dirian" do
   zap trash: "~/Library/Preferences/com.local.diroid.plist"
 
   caveats <<~EOS
+    Dirian requires adb, the Android Debug Bridge. It comes with Android Studio, in the
+    SDK's platform-tools, or you can install it on its own:
+
+      brew install --cask android-platform-tools
+
     Dirian isn't signed with an Apple Developer ID or notarized yet, so macOS blocks
     the first launch. Run this once:
 
@@ -27,8 +32,6 @@ cask "dirian" do
 
     Or open System Settings → Privacy & Security and click "Open Anyway".
 
-    Dirian also needs an adb server:
-
-      brew install --cask android-platform-tools
+    Dirian for Android is optional. Only Share Mac to Android needs it.
   EOS
 end
