@@ -1,6 +1,6 @@
 cask "dirian" do
-  version "0.3.11"
-  sha256 "3da8f9de07563f2d1625416fe7a1de11b27c2fdc6c573fdfdf5cd81321955e8c"
+  version "0.3.12"
+  sha256 "7728aba38806779931a639b15f8baebbf9286a616fec8fcb4f0eadab108f21a7"
 
   url "https://github.com/ike-V/Dirian/releases/download/v#{version}/Dirian-#{version}.zip"
   name "Dirian"
